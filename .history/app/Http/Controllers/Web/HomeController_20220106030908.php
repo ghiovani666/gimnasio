@@ -50,6 +50,7 @@ class HomeController extends Controller
     //ENVIAR CORREO DE INFORMACION
     public function enviar_email_informacion(Request $request)
     {
+
         Mail::to('ghiovani999@gmail.com')
         ->send(new EnviarCorreosInfo([
             'txt_nombre' => $request->txt_nombre,
@@ -58,7 +59,10 @@ class HomeController extends Controller
             'txt_asunto' => $request->txt_asunto,
             'txt_descripcion' => $request->txt_descripcion,
         ])); 
-        return response()->json(['data' => '<p class="alert alert-success">El formulario de contacto se envio correctamente</p> ']);
+
+        var_dump('dddddddd');
+        return redirect()->back()->with('status', 'Profile updated!');
+        // return redirect('dashboard')->with('status', 'Profile updated!');
     }
     
 }

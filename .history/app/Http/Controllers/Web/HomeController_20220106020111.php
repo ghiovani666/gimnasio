@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\DB;
-use Session;
+
 //ENVIAR CORREOS
 use Mail;
 use App\Mail\EnviarCorreosInfo;
@@ -50,15 +50,9 @@ class HomeController extends Controller
     //ENVIAR CORREO DE INFORMACION
     public function enviar_email_informacion(Request $request)
     {
-        Mail::to('ghiovani999@gmail.com')
-        ->send(new EnviarCorreosInfo([
-            'txt_nombre' => $request->txt_nombre,
-            'txt_email' => $request->txt_email,
-            'txt_telefono' => $request->txt_telefono,
-            'txt_asunto' => $request->txt_asunto,
-            'txt_descripcion' => $request->txt_descripcion,
-        ])); 
-        return response()->json(['data' => '<p class="alert alert-success">El formulario de contacto se envio correctamente</p> ']);
+
+    var_dump($request);
+
     }
     
 }

@@ -84,8 +84,8 @@
                         <div class="contact-form mb-md-90">
 
 
-                            <form class="contact-form-wrapper" id="sendFormServicios">
-                                {{ csrf_field() }}
+                            <form class="contact-form-wrapper" id="contact-form" method="POST" action="{{url('/enviar_email_informacion')}}">
+                                 {{ csrf_field() }}
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="section-title">
@@ -95,10 +95,6 @@
                                                     responderle y brindarle los consejos adecuados sobre su mensaje.</p>
                                             </div>
                                         </div>
-                                        <div class="section-title">
-                                            <!-- Message Notification -->
-                                            <div class="form-message"></div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -106,38 +102,33 @@
                                         <div class="row row-gutter-12">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="text" name="txt_nombre"
-                                                        id="txt_nombre" placeholder="Nombre">
+                                                    <input class="form-control" type="text" name="txt_nombre" id="txt_nombre" placeholder="Nombre">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="text" name="txt_email"
-                                                        id="txt_email" placeholder="Email">
+                                                    <input class="form-control" type="text" name="txt_email" id="txt_email"  placeholder="Email">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="text" name="txt_telefono"
-                                                        id="txt_telefono" placeholder="Teléfono">
+                                                    <input class="form-control" type="text" name="txt_telefono" id="txt_telefono"  placeholder="Teléfono">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="text" name="txt_asunto"
-                                                        id="txt_asunto" placeholder="Asunto">
+                                                    <input class="form-control" type="text" name="txt_asunto" id="txt_asunto"  placeholder="Asunto">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="form-group mb-0">
-                                                    <textarea name="txt_descripcion" id="txt_descripcion"
-                                                        placeholder="Escribe un mensaje"></textarea>
+                                                    <textarea name="txt_descripcion" id="txt_descripcion"  placeholder="Escribe un mensaje"></textarea>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12" style="text-align: center;">
+                                            <div class="col-md-12">
                                                 <div class="form-group mb-0">
-                                                    <button class="btn btn-theme" type="submit">ENVIAR MENSAJE</button>
+                                                    <button class="btn btn-theme btn-submit">ENVIAR MENSAJE</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -145,7 +136,11 @@
                                 </div>
                             </form>
                         </div>
-
+                        @if(Session::has('success'))
+                        <div class="alert alert-success">
+                            {{ Session::get('success') }}
+                        </div>
+                        @endif
                     </div>
                     <div class="col-lg-6">
                         <div class="contact-map-area">
@@ -171,26 +166,4 @@
 
 @section('footer_page')
 <!--//=======Extra=======//-->
-
-<script type="text/javascript">
-$('#sendFormServicios').on('submit', function(e) {
-    e.preventDefault();
-    let formData = new FormData(this);
-    axios.post('enviar_email_informacion',
-        formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        }
-    ).then(function(response) {
-        $('.form-message').html(response.data.data);
-        $('form :input').val('');
-        $('form :textarea').val('');
-    }).catch(function() {
-        console.log('FAILURE!!');
-    });
-
-});
-</script>
-
 @endsection

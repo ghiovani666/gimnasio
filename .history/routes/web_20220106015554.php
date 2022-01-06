@@ -69,5 +69,4 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
 });
 Route::get('/logout', 'Auth\LoginController@logout');
 //ENVIAR EMAILs
-// Route::post('enviar_email_informacion', 'Web\HomeControlle@enviar_email_informacion');
-Route::post('/enviar_email_informacion', 'Web\HomeController@enviar_email_informacion')->name('enviar_email_informacion');
+Route::post('/enviar_email_informacion', 'HomeController@enviar_email_informacion');

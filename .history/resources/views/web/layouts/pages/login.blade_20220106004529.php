@@ -46,7 +46,7 @@
                       aria-selected="false">Register</button>
                   </div>
                 </nav>
-              </div>   
+              </div>
               <div class="login-bottom">
                 <div class="login-form-content tab-content" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -86,7 +86,7 @@
                               </div>
                               <div class="col-md-12">
                                 <div class="form-group form-group-info">
-                                  <button class="btn btn-theme btn-black" type="submit">Login</button>
+                                  <button class="btn btn-theme btn-black" type="button">Login</button>
                                   <a class="btn-forgot" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
                                 </div>
                               </div>

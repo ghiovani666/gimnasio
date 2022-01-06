@@ -20,21 +20,22 @@
 
 <body>
 
-    <!--wrapper start-->
-    <div class="wrapper home-default-wrapper">
+  <!--wrapper start-->
+  <div class="wrapper home-default-wrapper">
 
-        <!-- Header para todas las paginas -->
-        @include('web.layouts.partials.header')
+    <!-- Header para todas las paginas -->
+    @include('web.layouts.partials.header')
 
-        @yield('content')
-        <!-- Footer para todas las paginas -->
-        @include('web.layouts.partials.footer')
+    @yield('content')
+    <!-- Footer para todas las paginas -->
+    @include('web.layouts.partials.footer')
 
-        <!-- Codigo JS para todas las paginas -->
-        @include('web.layouts.partials.footer_js')
+    <!-- Codigo JS para todas las paginas -->
+    @include('web.layouts.partials.footer_js')
 
-        @yield('footer_page')
+    @yield('footer_page')
 
-    </div>
+  </div>
 </body>
+
 </html>

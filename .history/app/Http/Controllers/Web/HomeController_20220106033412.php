@@ -50,6 +50,7 @@ class HomeController extends Controller
     //ENVIAR CORREO DE INFORMACION
     public function enviar_email_informacion(Request $request)
     {
+
         Mail::to('ghiovani999@gmail.com')
         ->send(new EnviarCorreosInfo([
             'txt_nombre' => $request->txt_nombre,

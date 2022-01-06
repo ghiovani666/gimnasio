@@ -171,26 +171,4 @@
 
 @section('footer_page')
 <!--//=======Extra=======//-->
-
-<script type="text/javascript">
-$('#sendFormServicios').on('submit', function(e) {
-    e.preventDefault();
-    let formData = new FormData(this);
-    axios.post('enviar_email_informacion',
-        formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        }
-    ).then(function(response) {
-        $('.form-message').html(response.data.data);
-        $('form :input').val('');
-        $('form :textarea').val('');
-    }).catch(function() {
-        console.log('FAILURE!!');
-    });
-
-});
-</script>
-
 @endsection
