@@ -115,13 +115,14 @@
                                 <div class="card card-primary">
                                     <div class="card-body">
 
-                                    
-                                    <div class="form-group">
+
+                                        <div class="form-group">
                                             <div class="form-group">
                                                 <label>Tipo de Servicio</label>
                                                 <select class="form-control" name="txt_id_servicio">
                                                     @foreach ($rowData_cb_ as $rows)
-                                                    <option value="{{ $rows->id_servicio }}">{{ $rows->superior_titulo1 }}
+                                                    <option value="{{ $rows->id_servicio }}">
+                                                        {{ $rows->superior_titulo1 }}
                                                     </option>
                                                     @endforeach
                                                 </select>
@@ -150,14 +151,52 @@
                                                 placeholder="Enter ..." required></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <div class="input-group">
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <div class="contain animated bounce">
+                                                
+                                                    <div class="alert"></div>
+                                                    <div id='img_contain'><img id="blah" align='middle'
+                                                            src="http://www.clker.com/cliparts/c/W/h/n/P/W/generic-image-file-icon-hi.png"
+                                                            alt="your image" title='' /></div>
+                                                    <div class="input-group">
+                                                        <div class="custom-file">
+                                                            <input type="file" id="inputGroupFile01"
+                                                                class="imgInp custom-file-input"
+                                                                aria-describedby="inputGroupFileAddon01">
+                                                            <label class="custom-file-label"
+                                                                for="inputGroupFile01">Choose file</label>
+                                                        </div>
+                                                    </div>
+                                                
+                                            </div>
+
+
+
+
+
+
+
+
+                                            <!-- <div class="input-group">
                                                 <div class="custom-file">
                                                     <label class="col-sm-2 col-form-label">Subir Imagen</label>
                                                     <div class="col-sm-10">
                                                         <input type="file" name="image" id="image" class="form-control">
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="form-group" style="text-align: center">
                                             <div class="col-sm-12" style="margin-bottom: 20px">
@@ -185,4 +224,89 @@
 
 </div>
 
+<style type="text/css">
+.alert {
+    text-align: center;
+}
+
+#blah {
+    max-height: 256px;
+    height: auto;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+#img_contain {
+    border-radius: 5px;
+    /*  border:1px solid grey;*/
+    margin-top: 20px;
+    width: auto;
+}
+
+.input-group {
+    /* margin-left:calc(calc(100vw - 320px)/2); */
+    margin-top: 40px;
+    width: 320px;
+}
+
+.imgInp {
+    width: 150px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d3d3d3;
+}
+
+.loading {
+    animation: blinkingText ease 2.5s infinite;
+}
+
+@keyframes blinkingText {
+    0% {
+        color: #000;
+    }
+
+    50% {
+        color: #transparent;
+    }
+
+    99% {
+        color: transparent;
+    }
+
+    100% {
+        color: #000;
+    }
+}
+
+.custom-file-label {
+    cursor: pointer;
+}
+
+/************CREDITS**************/
+.credit {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    font-size: 12px;
+    color: #3d3d3d;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.credit a {
+    color: gray;
+}
+
+.credit a:hover {
+    color: black;
+}
+
+.credit a:visited {
+    color: MediumPurple;
+}
+</style>
 @endsection
