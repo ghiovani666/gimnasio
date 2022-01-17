@@ -17,7 +17,7 @@ class HomeController extends Controller {
     return view('admin.home.homes');
   }
   public function bienvenidos () {
-    $clases_ = DB::table('web_home')->where("id_home",6)->get();
+    $clases_ = DB::table('web_novedad')->where("id_servicio",5)->get();
     return view('admin.home.bienvenidos')->with(compact('clases_'));
   }
   public function quienesSomos () {
@@ -54,10 +54,13 @@ class HomeController extends Controller {
         ->where("id_home",$request->txt_id_home)
         ->get();
         return json_encode($result);
-      }else{
+      }else if($request->txt_isclass=="clases"){
         $result = DB::table('web_home')
         ->where("id_home",$request->txt_id_home)
         ->get();
+
+        var_dump($result);
+        exit();
         return json_encode($result);
       }
 
@@ -317,16 +320,4 @@ class HomeController extends Controller {
                return back()->with('message','Se Actualizo');
          }
    
-    public function updateBienvenido(Request $request) 
-    {       
-      $result = DB::table('web_home')
-          ->where("id_home",$request->txt_values)
-          ->update([
-            'title1' => $request->txt_title1,
-            'descripcion' => $request->txt_descripcion,
-          ]);
-
-          return json_encode(['data' => 'Actualizado el registro correctamente!','state' => $result]);
-    }
-
 }

@@ -319,14 +319,16 @@ class HomeController extends Controller {
    
     public function updateBienvenido(Request $request) 
     {       
-      $result = DB::table('web_home')
+          DB::table('web_home')
           ->where("id_home",$request->txt_values)
           ->update([
             'title1' => $request->txt_title1,
             'descripcion' => $request->txt_descripcion,
+            
+            
           ]);
 
-          return json_encode(['data' => 'Actualizado el registro correctamente!','state' => $result]);
+            return back()->with('message','Se Actualizo');
     }
 
 }

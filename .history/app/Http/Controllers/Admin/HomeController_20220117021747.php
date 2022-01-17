@@ -319,14 +319,30 @@ class HomeController extends Controller {
    
     public function updateBienvenido(Request $request) 
     {       
-      $result = DB::table('web_home')
-          ->where("id_home",$request->txt_values)
-          ->update([
-            'title1' => $request->txt_title1,
-            'descripcion' => $request->txt_descripcion,
-          ]);
+            if($request->inferior_url_image==null || $request->inferior_url_image==''){
+                DB::table('web_novedad')
+                ->where("id_servicio",$request->txt_values)
+                ->update([
+                  'superior_titulo1' => $request->superior_titulo1,
+                  'superior_titulo2' => $request->superior_titulo2,
+                  'inferior_titulo' => $request->inferior_titulo,
+                  'inferior_descripcion' => $request->inferior_descripcion,
+                  
+                  
+                ]); 
+              }else{
+                DB::table('web_novedad')
+                ->where("id_servicio",$request->txt_values)
+                ->update([
+                  'superior_titulo1' => $request->superior_titulo1,
+                  'superior_titulo2' => $request->superior_titulo2,
+                  'inferior_titulo' => $request->inferior_titulo,
+                  'inferior_descripcion' => $request->inferior_descripcion,
+                  'inferior_url_image' => $request->inferior_url_image,
+                ]); 
+              }
 
-          return json_encode(['data' => 'Actualizado el registro correctamente!','state' => $result]);
+            return back()->with('message','Se Actualizo');
     }
 
 }

@@ -230,18 +230,18 @@ $('#updateBienvenido').on('submit', function (e) {
         }
     }
     ).then(function (response) {
-        console.log(response)
-        setTimeout(() => {
-            if (response.status == 200) {
-                $('#msj_alert').html(
-                    '<div class="alert alert-success" role="alert">' + response.data.data + '</div>')
-                    .fadeOut(9500);
-            } else {
-                $('#msj_alert').html(
-                    '<div class="alert alert-danger" role="alert"> Error al actualizar</div>')
-                    .fadeOut(9500);
-            }
-        }, 500);
+
+        console.log(response);
+
+        // if (response.data[1] == 'superior') {
+        //     $('#imagen_superior').html(response.data[0]);
+        // } else {
+        //     $('#imagen_inferior').html(response.data[0]);
+        // }
+
+        // $('#msj_alert').html(
+        //     '<div class="alert alert-success" role="alert">Actualizado Correctamente.!</div>')
+        //     .fadeOut(9500);
 
 
     }).catch(function () {

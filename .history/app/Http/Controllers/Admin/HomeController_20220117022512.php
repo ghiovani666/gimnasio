@@ -324,6 +324,8 @@ class HomeController extends Controller {
           ->update([
             'title1' => $request->txt_title1,
             'descripcion' => $request->txt_descripcion,
+            
+            
           ]);
 
           return json_encode(['data' => 'Actualizado el registro correctamente!','state' => $result]);

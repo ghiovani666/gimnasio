@@ -127,16 +127,34 @@
     <!--== Start About Area ==-->
     <section class="about-area about-default-area position-relative">
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title text-center" data-aos="fade-up" data-aos-Duración="1000">
-                        <h2 class="title"><span>{{$slider_[5]->title1}}</h2>
+                        <h2 class="title"> <span>{{$slider_[5]->title1}} </span</h2>
                         <div class="desc">
-                            <p>{{$slider_[5]->descripcion}}</p>
+                            <p>“Fitness” o “Wellness”, son términos que utilizamos popularmente para referirnos al
+                                equilibrio entre el bienestar físico y mental, a un estilo de vida saludable y
+                                beneficioso
+                                para nuestro cuerpo y para nuestras capacidades, que nos permite llevar a cabo
+                                cualquier actividad, tanto deportiva como cotidiana.
+                                El ejercicio físico, la importancia de cuidar de nuestro cuerpo tanto a nivel estético
+                                como de salud y las sensaciones positivas que nos proporciona el deporte, han hecho
+                                que el fitness sea siempre algo vigente en nuestra sociedad, ganando mayor alcance y
+                                valor con los años en proporción a la facilidad con la que hoy en día se obtiene
+                                información acerca del ejercicio y las dietas, de qué es beneficioso y qué dañino para
+                                nuestro organismo y de la importancia de verse y sentirse bien.
+                                Si algo está claro es que nuestro cuerpo ha de ser nuestro templo, dado que nos
+                                acompañará y refugiará durante toda nuestra existencia, y por ello hemos de cuidarlo
+                                y darle el mejor trato posible para que esto sea recíproco. ¡Dale a tu cuerpo la
+                                energía,
+                                la vigorosidad, el movimiento y el esmero que éste merece, y los resultados que
+                                obtendrás serán útiles para cualquier ámbito de tu vida!</p>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-lg-7 col-xl-7 order-1 order-lg-0">
                     <div class="thumb" data-aos="fade-left" data-aos-Duración="1000">

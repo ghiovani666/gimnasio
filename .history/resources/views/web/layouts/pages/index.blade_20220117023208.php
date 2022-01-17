@@ -127,16 +127,18 @@
     <!--== Start About Area ==-->
     <section class="about-area about-default-area position-relative">
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title text-center" data-aos="fade-up" data-aos-Duración="1000">
-                        <h2 class="title"><span>{{$slider_[5]->title1}}</h2>
+                        <h2 class="title"> <span>{{$slider_[5]->title1}} </span</h2>
                         <div class="desc">
                             <p>{{$slider_[5]->descripcion}}</p>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-lg-7 col-xl-7 order-1 order-lg-0">
                     <div class="thumb" data-aos="fade-left" data-aos-Duración="1000">

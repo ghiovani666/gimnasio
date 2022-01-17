@@ -11,6 +11,7 @@ const obtenerDatosModal = (txt_id_home, isClass) => {
         'txt_isclass': isClass,
     })
         .then(function (response) {
+            console.log(response)
             $('textarea[name=txt_titulo1]').val(response.data[0].title1);
             $('textarea[name=txt_titulo2]').val(response.data[0].title2);
         }).catch(function (error) {
@@ -210,39 +211,6 @@ $('#uploadFormServiciosNovedad').on('submit', function (e) {
         } else {
             $('#imagen_inferior').html(response.data[0]);
         }
-
-    }).catch(function () {
-        console.log('FAILURE!!');
-    });
-
-});
-
-
-//::::::::::::::::::::::::::::::::::::::ACTUALIZAR BIENVENIDOS
-
-$('#updateBienvenido').on('submit', function (e) {
-    e.preventDefault();
-    let formData = new FormData(this);
-    axios.post('updateBienvenido',
-        formData, {
-        headers: {
-            'Content-Type': 'multipart/form-data'
-        }
-    }
-    ).then(function (response) {
-        console.log(response)
-        setTimeout(() => {
-            if (response.status == 200) {
-                $('#msj_alert').html(
-                    '<div class="alert alert-success" role="alert">' + response.data.data + '</div>')
-                    .fadeOut(9500);
-            } else {
-                $('#msj_alert').html(
-                    '<div class="alert alert-danger" role="alert"> Error al actualizar</div>')
-                    .fadeOut(9500);
-            }
-        }, 500);
-
 
     }).catch(function () {
         console.log('FAILURE!!');

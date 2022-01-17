@@ -27,21 +27,21 @@
             <div id="msj_alert"></div>
             <form id="updateBienvenido">
                 {{ csrf_field() }}
-                <input type="hidden" name="txt_values" value="6" />
+                <input type="hidden" name="txt_values" value="5" />
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="card-block">
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Título</label>
                                 <div class="col-sm-10">
-                                    <textarea type="text" name="txt_title1"
+                                    <textarea type="text" name="superior_titulo1"
                                         class="form-control">{{$clases_[0]->title1  }}</textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Descripción</label>
                                 <div class="col-sm-10">
-                                    <textarea type="text" name="txt_descripcion"
+                                    <textarea type="text" name="superior_titulo2"
                                         class="form-control">{{$clases_[0]->descripcion  }}</textarea>
                                 </div>
                             </div>

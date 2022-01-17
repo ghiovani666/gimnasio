@@ -17,7 +17,7 @@ class HomeController extends Controller {
     return view('admin.home.homes');
   }
   public function bienvenidos () {
-    $clases_ = DB::table('web_home')->where("id_home",6)->get();
+    $clases_ = DB::table('web_novedad')->where("id_servicio",5)->get();
     return view('admin.home.bienvenidos')->with(compact('clases_'));
   }
   public function quienesSomos () {
@@ -54,7 +54,7 @@ class HomeController extends Controller {
         ->where("id_home",$request->txt_id_home)
         ->get();
         return json_encode($result);
-      }else{
+      }else if($request->txt_isclass=="clases"){
         $result = DB::table('web_home')
         ->where("id_home",$request->txt_id_home)
         ->get();
@@ -197,7 +197,7 @@ class HomeController extends Controller {
           case 'entrenador': 
 
             if($file){
-              $url_imagen =  DB::table('web_home')->where('id_home', '=', $request->txt_id_home)->get();
+              $url_imagen =  DB::table('web_entrenador')->where('id_home', '=', $request->txt_id_home)->get();
               
               if(file_exists(str_replace('/template_admin/', 'template_admin/',  $url_imagen[0]->url_image))){
                   unlink(str_replace('/template_admin/', 'template_admin/',  $url_imagen[0]->url_image));
@@ -207,7 +207,7 @@ class HomeController extends Controller {
                 $path = "template_admin/img";
                 $file->move($path,$filename); // save to our local folder
 
-              DB::table('web_home')
+              DB::table('web_entrenador')
                 ->where("id_home",$request->txt_id_home)
                 ->update([
                 'title1' => $request->txt_titulo1,
@@ -216,7 +216,7 @@ class HomeController extends Controller {
                 ]); 
 
               }else{
-                DB::table('web_home')
+                DB::table('web_entrenador')
                   ->where("id_home",$request->txt_id_home)
                   ->update([
                   'title1' => $request->txt_titulo1,
@@ -225,7 +225,7 @@ class HomeController extends Controller {
     
               }
 
-                $data=  DB::table('web_home')->where('id_home', '=', $request->txt_id_home)->get();
+                $data=  DB::table('web_entrenador')->where('id_home', '=', $request->txt_id_home)->get();
                 $html='';
                 $html.='
                 <img class="card-img-top" src="'.$data[0]->url_image.'" alt="Photo">
@@ -311,22 +311,10 @@ class HomeController extends Controller {
        }
        public function entrenador_guardar_descripcion(Request $request) 
        {        
-               DB::table('web_home')
+               DB::table('web_entrenador')
                ->where("id_home",17)
                ->update(['descripcion' => $request->txt_descripcion]); 
                return back()->with('message','Se Actualizo');
          }
    
-    public function updateBienvenido(Request $request) 
-    {       
-      $result = DB::table('web_home')
-          ->where("id_home",$request->txt_values)
-          ->update([
-            'title1' => $request->txt_title1,
-            'descripcion' => $request->txt_descripcion,
-          ]);
-
-          return json_encode(['data' => 'Actualizado el registro correctamente!','state' => $result]);
-    }
-
 }

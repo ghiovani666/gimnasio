@@ -74,14 +74,14 @@ use Illuminate\Support\Facades\Route;
         Route::post('/clases_guardar_descripcion',        'Admin\HomeController@clases_guardar_descripcion');
         Route::post('/fitness_guardar_descripcion',       'Admin\HomeController@fitness_guardar_descripcion');
         Route::post('/entrenador_guardar_descripcion',    'Admin\HomeController@entrenador_guardar_descripcion');  
-        Route::get('/homes',             'Admin\HomeController@homes');
-        Route::get('/bienvenidos',       'Admin\HomeController@bienvenidos');
-        Route::get('/quienesSomos',      'Admin\HomeController@quienesSomos');
-        Route::get('/localizacion',      'Admin\HomeController@localizacion');
-        Route::get('/slider',            'Admin\HomeController@slider');
-        Route::get('/clases',            'Admin\HomeController@clases');
-        Route::get('/fitness',           'Admin\HomeController@fitness');
-        Route::get('/entrenador',        'Admin\HomeController@entrenador');
+        Route::get('/homes',       'Admin\HomeController@homes');
+        Route::get('/bienvenidos', 'Admin\HomeController@bienvenidos');
+        Route::get('/quienesSomos','Admin\HomeController@quienesSomos');
+        Route::get('/localizacion','Admin\HomeController@localizacion');
+        Route::get('/slider',      'Admin\HomeController@slider');
+        Route::get('/clases',      'Admin\HomeController@clases');
+        Route::get('/fitness',     'Admin\HomeController@fitness');
+        Route::get('/entrenador',  'Admin\HomeController@entrenador');
         Route::post('/updateBienvenido', 'Admin\HomeController@updateBienvenido');
 
         //::::::::::::::::::::::: CONTROLLER SERVICIO ::::::::::::::::::::::::::

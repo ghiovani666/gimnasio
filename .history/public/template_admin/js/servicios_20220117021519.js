@@ -220,30 +220,19 @@ $('#uploadFormServiciosNovedad').on('submit', function (e) {
 
 //::::::::::::::::::::::::::::::::::::::ACTUALIZAR BIENVENIDOS
 
-$('#updateBienvenido').on('submit', function (e) {
+$('#updateBienvenidos').on('submit', function (e) {
     e.preventDefault();
     let formData = new FormData(this);
-    axios.post('updateBienvenido',
+    axios.post('updateBienvenidos',
         formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
         }
     }
     ).then(function (response) {
-        console.log(response)
-        setTimeout(() => {
-            if (response.status == 200) {
-                $('#msj_alert').html(
-                    '<div class="alert alert-success" role="alert">' + response.data.data + '</div>')
-                    .fadeOut(9500);
-            } else {
-                $('#msj_alert').html(
-                    '<div class="alert alert-danger" role="alert"> Error al actualizar</div>')
-                    .fadeOut(9500);
-            }
-        }, 500);
-
-
+        $('#msj_alert').html(
+            '<div class="alert alert-success" role="alert">Actualizado Correctamente.!</div>')
+            .fadeOut(9500);
     }).catch(function () {
         console.log('FAILURE!!');
     });

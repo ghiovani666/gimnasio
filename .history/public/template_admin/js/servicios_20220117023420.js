@@ -230,7 +230,6 @@ $('#updateBienvenido').on('submit', function (e) {
         }
     }
     ).then(function (response) {
-        console.log(response)
         setTimeout(() => {
             if (response.status == 200) {
                 $('#msj_alert').html(
