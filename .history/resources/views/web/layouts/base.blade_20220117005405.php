@@ -563,8 +563,13 @@
     font-size: 26px;
 }
 
-/* ::::::::::::::::::::::::: MOVIL PARA LA WEB GIMANSIO ::::::::::::::::::::::::::::::::::: */
-@media only screen and (max-width: 479.98px) {
+
+
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 767px) {
     .header-top .left-column {
         position: relative;
         display: flex;

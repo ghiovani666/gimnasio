@@ -23,24 +23,24 @@
                 ?>
 
                 <!-- Header Top -->
-                <div class="header-top" style="background-color: #0c0c0c !important;">
+                <div class="header-top">
                     <div class="auto-container">
                         <div class="inner-container">
-                            <div class="left-column " style="margin-left: 45px;">
-                                <ul class="contact-info" >
+                            <div class="left-column">
+                                <ul class="contact-info" style="margin-left: 45px;">
                                     <li><a href="/" style="font-size: 14px;">INICIO</a></li>
                                     <li><a href="viewAbout" style="font-size: 14px;">QUIENES SOMOS</a></li>
                                     <li><a href="viewLocation" style="font-size: 14px;">LOCALIZACIÓN</a></li>
                                     <li><a href="viewContacto" style="font-size: 14px;">CONTACTO</a></li>
                                 </ul>
                             </div>
-                            <div class="right-column" style="margin-left: 10%;">
+                            <div class="right-column">
                                 <ul class="social-icon">
-                                    <!-- <li><a href="#">Email: {{ $footer_[0]->email }}</a></li> -->
+                                    <li><a href="#">Email: {{ $footer_[0]->email }}</a></li>
                                     <li><a href="#">Telf: {{ $footer_[0]->telefono }}</a></li>
                                 </ul>
                             </div>
-                            <footer class="footer-area default-style bg-img" style="margin-right: 45px;text-align: center;flex: auto;margin-bottom: 28px;">
+                            <footer class="footer-area default-style bg-img" style="margin-right: 45px;">
                                 <div class="widget-social-icons">
                                     <a href="{{ $footer_[0]->red_social_facebook }}"><i class="fa fa-facebook"></i></a>
                                     <a href="{{ $footer_[0]->red_social_instagram }}"><i class="fa fa-instagram"></i></a>

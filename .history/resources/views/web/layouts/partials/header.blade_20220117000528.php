@@ -26,7 +26,7 @@
                 <div class="header-top" style="background-color: #0c0c0c !important;">
                     <div class="auto-container">
                         <div class="inner-container">
-                            <div class="left-column " style="margin-left: 45px;">
+                            <div class="left-column " style="margin-left: 10%;">
                                 <ul class="contact-info" >
                                     <li><a href="/" style="font-size: 14px;">INICIO</a></li>
                                     <li><a href="viewAbout" style="font-size: 14px;">QUIENES SOMOS</a></li>
@@ -40,7 +40,7 @@
                                     <li><a href="#">Telf: {{ $footer_[0]->telefono }}</a></li>
                                 </ul>
                             </div>
-                            <footer class="footer-area default-style bg-img" style="margin-right: 45px;text-align: center;flex: auto;margin-bottom: 28px;">
+                            <footer class="footer-area default-style bg-img" style="margin-right: 45px;text-align: center;    flex: auto">
                                 <div class="widget-social-icons">
                                     <a href="{{ $footer_[0]->red_social_facebook }}"><i class="fa fa-facebook"></i></a>
                                     <a href="{{ $footer_[0]->red_social_instagram }}"><i class="fa fa-instagram"></i></a>

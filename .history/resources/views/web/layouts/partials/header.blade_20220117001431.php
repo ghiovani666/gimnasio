@@ -40,7 +40,7 @@
                                     <li><a href="#">Telf: {{ $footer_[0]->telefono }}</a></li>
                                 </ul>
                             </div>
-                            <footer class="footer-area default-style bg-img" style="margin-right: 45px;text-align: center;flex: auto;margin-bottom: 28px;">
+                            <footer class="footer-area default-style bg-img" style="margin-right: 45px;text-align: center;    flex: auto">
                                 <div class="widget-social-icons">
                                     <a href="{{ $footer_[0]->red_social_facebook }}"><i class="fa fa-facebook"></i></a>
                                     <a href="{{ $footer_[0]->red_social_instagram }}"><i class="fa fa-instagram"></i></a>

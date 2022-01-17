@@ -563,8 +563,9 @@
     font-size: 26px;
 }
 
-/* ::::::::::::::::::::::::: MOVIL PARA LA WEB GIMANSIO ::::::::::::::::::::::::::::::::::: */
-@media only screen and (max-width: 479.98px) {
+
+
+@media only screen and (max-width: 991px) {
     .header-top .left-column {
         position: relative;
         display: flex;
@@ -585,11 +586,10 @@
         height: 830px;
 
     }
-
     .home-slider-area.slider-default {
-        position: relative;
-        padding-top: 320px;
-    }
+    position: relative;
+    padding-top: 320px;
+}
 }
 </style>
 

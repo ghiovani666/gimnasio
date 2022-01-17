@@ -563,34 +563,21 @@
     font-size: 26px;
 }
 
-/* ::::::::::::::::::::::::: MOVIL PARA LA WEB GIMANSIO ::::::::::::::::::::::::::::::::::: */
-@media only screen and (max-width: 479.98px) {
+
+
+@media only screen and (max-width: 767px) {
     .header-top .left-column {
-        position: relative;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-left: 20% !important;
-    }
-
-    .header-area.header-default.header-style.sticky-header.sticky .header-action-area .btn-menu {
-        color: #ffffff !important;
-    }
-
-    .home-slider-area.slider-default .slider-content-area .slider-thumb {
-        display: block !important;
-    }
-
-    .home-slider-area.slider-default .slider-content-area {
-        height: 830px;
-
-    }
-
-    .home-slider-area.slider-default {
-        position: relative;
-        padding-top: 320px;
-    }
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 20% !important;
 }
+
+}
+
+
+
 </style>
 
 </html>

@@ -79,7 +79,7 @@
                             <img src="{{$slider_[2]->url_image}}" alt="Image">
                         </div>
                         <div class="featured-info">
-                            <a href="{{$slider_[2]->url_link}}">
+                        <a href="{{$slider_[2]->url_link}}">
                                 <h4>{{$slider_[2]->title1}}</h4>
                             </a>
 
@@ -94,7 +94,7 @@
                             <img src="{{$slider_[3]->url_image}}" alt="Image">
                         </div>
                         <div class="featured-info">
-                            <a href="{{$slider_[3]->url_link}}">
+                        <a href="{{$slider_[3]->url_link}}">
                                 <h4>{{$slider_[3]->title1}}</h4>
                             </a>
 
@@ -109,7 +109,7 @@
                             <img src="{{$slider_[4]->url_image}}" alt="Image">
                         </div>
                         <div class="featured-info">
-                            <a href="{{$slider_[4]->url_link}}">
+                        <a href="{{$slider_[4]->url_link}}">
                                 <h4>{{$slider_[4]->title1}}</h4>
                             </a>
 
@@ -313,8 +313,7 @@
                                                     alt="Image"></span></a>
                                     </div>
                                     <div class="content">
-                                        <h4 class="title"><a
-                                                href="{{$clases_[0]->url_link}}">{{ $clases_[0]->title1 }}</a></h4>
+                                        <h4 class="title"><a href="#">{{ $clases_[0]->title1 }}</a></h4>
                                         <h4 class="class-time">{{ $clases_[0]->title2 }}</h4>
                                     </div>
                                 </div>
@@ -330,7 +329,7 @@
                                                     alt="Image"></span></a>
                                     </div>
                                     <div class="content">
-                                        <h4 class="title"><a href="{{$clases_[1]->url_link}}">{{ $clases_[1]->title1 }}</a></h4>
+                                        <h4 class="title"><a href="#">{{ $clases_[1]->title1 }}</a></h4>
                                         <h4 class="class-time">{{ $clases_[1]->title2 }}</h4>
                                     </div>
                                 </div>
@@ -346,7 +345,7 @@
                                                     alt="Image"></span></a>
                                     </div>
                                     <div class="content">
-                                        <h4 class="title"><a href="{{$clases_[2]->url_link}}">{{ $clases_[2]->title1 }}</a></h4>
+                                        <h4 class="title"><a href="#">{{ $clases_[2]->title1 }}</a></h4>
                                         <h4 class="class-time">{{ $clases_[2]->title2 }}</h4>
                                     </div>
                                 </div>
@@ -362,7 +361,7 @@
                                                     alt="Image"></span></a>
                                     </div>
                                     <div class="content">
-                                        <h4 class="title"><a href="{{$clases_[3]->url_link}}">{{ $clases_[3]->title1 }}</a></h4>
+                                        <h4 class="title"><a href="#">{{ $clases_[3]->title1 }}</a></h4>
                                         <h4 class="class-time">{{ $clases_[3]->title2 }}</h4>
                                     </div>
                                 </div>
@@ -378,7 +377,7 @@
                                                     alt="Image"></span></a>
                                     </div>
                                     <div class="content">
-                                        <h4 class="title"><a href="{{$clases_[4]->url_link}}">{{ $clases_[4]->title1 }}</a></h4>
+                                        <h4 class="title"><a href="#">{{ $clases_[4]->title1 }}</a></h4>
                                         <h4 class="class-time">{{ $clases_[4]->title2 }}</h4>
                                     </div>
                                 </div>
@@ -394,7 +393,7 @@
                                                     alt="Image"></span></a>
                                     </div>
                                     <div class="content">
-                                        <h4 class="title"><a href="{{$clases_[5]->url_link}}">{{ $clases_[5]->title1 }}</a></h4>
+                                        <h4 class="title"><a href="#">{{ $clases_[5]->title1 }}</a></h4>
                                         <h4 class="class-time">{{ $clases_[5]->title2 }}</h4>
                                     </div>
                                 </div>
