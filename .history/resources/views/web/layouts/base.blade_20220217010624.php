@@ -563,10 +563,6 @@
     font-size: 26px;
 }
 
-.submenu_monitor{
-    display: none;
-}
-
 /* ::::::::::::::::::::::::: MOVIL PARA LA WEB GIMANSIO ::::::::::::::::::::::::::::::::::: */
 @media only screen and (max-width: 479.98px) {
     /* .header-top .left-column {
@@ -597,10 +593,6 @@
 
     .header-top {
         display: none;
-    }
-
-    .submenu_monitor{
-        display: block;
     }
 
 }

@@ -84,30 +84,16 @@
                                 <li class="has-submenu"><a href="#">Tienda</a></li>
                                 <li><a href="viewContacto">Contacto</a></li>
 
-                                <li class="submenu_monitor"><a href="viewAbout">Quiénes Somos</a></li>
-                                <li class="submenu_monitor"><a href="viewLocation">Localización</a></li>
-                                <?php if (Auth::check()) { ?>
-                                <li class="has-submenu submenu_monitor"><a href="javascript:return false"><i class="fa fa-power-off" style="margin-right: 10px;"></i>LOGOUT</a>
-                                    <ul class="submenu-nav">
-                                        <li><a href="/admin/homes">Administrador</a></li>
-                                        <li><a href="/logout">Cerrar Sesión</a></li>
-                                    </ul>
-                                </li>
-                                <?php } else { ?>
+                                <li><a href="viewAbout">Quiénes Somos</a></li>
+                                <li><a href="viewLocation">Localización</a></li>
 
-                                <button class="btn-cart cart-icon submenu_monitor" onclick="window.location.href='/admin/homes'">
-                                    <span class="cart-count">?</span>
-                                    <i class="pe-7s-users"></i>
-                                </button>
-
-                                <?php } ?>
 
 
                             </ul>
                         </div>
 
                         <div class="header-action-area">
-                            <div class="header-action-cart d-none d-xl-block">
+                            <div class="header-action-cart d-xl-block">
 
                                 <?php if (Auth::check()) { ?>
                                 <li class="has-submenu"><a href="javascript:return false"><i class="fa fa-power-off" style="margin-right: 10px;"></i>LOGOUT</a>

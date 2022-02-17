@@ -23,7 +23,7 @@
                 ?>
 
                 <!-- Header Top -->
-                <div class="header-top" style="background-color: #0c0c0c !important;">
+                <div class="header-top d-none" style="background-color: #0c0c0c !important;">
                     <div class="auto-container">
                         <div class="inner-container">
                             <div class="left-column " style="margin-left: 45px;">
@@ -84,23 +84,9 @@
                                 <li class="has-submenu"><a href="#">Tienda</a></li>
                                 <li><a href="viewContacto">Contacto</a></li>
 
-                                <li class="submenu_monitor"><a href="viewAbout">Quiénes Somos</a></li>
-                                <li class="submenu_monitor"><a href="viewLocation">Localización</a></li>
-                                <?php if (Auth::check()) { ?>
-                                <li class="has-submenu submenu_monitor"><a href="javascript:return false"><i class="fa fa-power-off" style="margin-right: 10px;"></i>LOGOUT</a>
-                                    <ul class="submenu-nav">
-                                        <li><a href="/admin/homes">Administrador</a></li>
-                                        <li><a href="/logout">Cerrar Sesión</a></li>
-                                    </ul>
-                                </li>
-                                <?php } else { ?>
+                                <li><a href="viewAbout">Quiénes Somos</a></li>
+                                <li><a href="viewLocation">Localización</a></li>
 
-                                <button class="btn-cart cart-icon submenu_monitor" onclick="window.location.href='/admin/homes'">
-                                    <span class="cart-count">?</span>
-                                    <i class="pe-7s-users"></i>
-                                </button>
-
-                                <?php } ?>
 
 
                             </ul>
