@@ -105,9 +105,8 @@ use Illuminate\Support\Facades\Route;
         Route::post('/servicioGrabarTitulo','Admin\ServicioController@servicioGrabarTitulo');
         Route::post('/servicioEditarTitulo','Admin\ServicioController@servicioEditarTitulo');
 
-        //::::::::::::::::::::::: CONTROLLER SERVICIO LOGO ::::::::::::::::::::::::::
+        //::::::::::::::::::::::: CONTROLLER SERVICIO: CRUD DE TITULO ::::::::::::::::::::::::::
         Route::get('/adminServicioLogo',  'Admin\ServicioLogoController@adminServicioLogo');
-        Route::post('/imagenServicioLogo', 'Admin\ServicioLogoController@imagenServicioLogo');
 
     });
 

@@ -34,7 +34,6 @@ class ServicioController extends Controller
     public function viewServicioPadel(){
         $rowData_ = DB::table('web_servicio')->get();
         $rowData_opciones = DB::table('web_servicio_titulo')->join('web_servicio_descripcion', 'web_servicio_titulo.id_titulo', '=', 'web_servicio_descripcion.id_titulo')->join('web_servicio', 'web_servicio_titulo.id_servicio', '=', 'web_servicio.id_servicio')->where('web_servicio.id_servicio', '=', 2)->get()->toArray();
-        $logoData = DB::table('web_servicio_logo')->where("id_servicio_logo",2)->get();
 
         $result = array();
         foreach ($rowData_opciones as $element) {
@@ -48,12 +47,11 @@ class ServicioController extends Controller
             ];
         }
 
-    	return view('web.layouts.pages.servicio.servicioPadel')->with(compact('rowData_'))->with(compact('result'))->with(compact('logoData'));
+    	return view('web.layouts.pages.servicio.servicioPadel')->with(compact('rowData_'))->with(compact('result'));
     }
     public function viewServicioFisio(){
         $rowData_ = DB::table('web_servicio')->get();
         $rowData_opciones = DB::table('web_servicio_titulo')->join('web_servicio_descripcion', 'web_servicio_titulo.id_titulo', '=', 'web_servicio_descripcion.id_titulo')->join('web_servicio', 'web_servicio_titulo.id_servicio', '=', 'web_servicio.id_servicio')->where('web_servicio.id_servicio', '=', 3)->get()->toArray();
-        $logoData = DB::table('web_servicio_logo')->where("id_servicio_logo",3)->get();
 
         $result = array();
         foreach ($rowData_opciones as $element) {
@@ -67,12 +65,11 @@ class ServicioController extends Controller
             ];
         }
 
-    	return view('web.layouts.pages.servicio.servicioFisio')->with(compact('rowData_'))->with(compact('result'))->with(compact('logoData'));
+    	return view('web.layouts.pages.servicio.servicioFisio')->with(compact('rowData_'))->with(compact('result'));;
     }
     public function viewServicioFitness(){
         $rowData_ = DB::table('web_servicio')->get();
         $rowData_opciones = DB::table('web_servicio_titulo')->join('web_servicio_descripcion', 'web_servicio_titulo.id_titulo', '=', 'web_servicio_descripcion.id_titulo')->join('web_servicio', 'web_servicio_titulo.id_servicio', '=', 'web_servicio.id_servicio')->where('web_servicio.id_servicio', '=', 4)->get()->toArray();
-        $logoData = DB::table('web_servicio_logo')->where("id_servicio_logo",4)->get();
 
         $result = array();
         foreach ($rowData_opciones as $element) {
@@ -85,7 +82,7 @@ class ServicioController extends Controller
                 "url_link"=>$element->url_link,
             ];
         }
-    	return view('web.layouts.pages.servicio.servicioFitness')->with(compact('rowData_'))->with(compact('result'))->with(compact('logoData'));
+    	return view('web.layouts.pages.servicio.servicioFitness')->with(compact('rowData_'))->with(compact('result'));;
     }
     
 }

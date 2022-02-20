@@ -107,7 +107,6 @@ use Illuminate\Support\Facades\Route;
 
         //::::::::::::::::::::::: CONTROLLER SERVICIO LOGO ::::::::::::::::::::::::::
         Route::get('/adminServicioLogo',  'Admin\ServicioLogoController@adminServicioLogo');
-        Route::post('/imagenServicioLogo', 'Admin\ServicioLogoController@imagenServicioLogo');
 
     });
 
